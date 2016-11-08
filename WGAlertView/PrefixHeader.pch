@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  WGAlertView
+//
+//  Created by Alex William on 2016/11/8.
+//  Copyright © 2016年 WaiKa. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "NSObject+frameExtension.h"
+#import "UIImage+orignalImage.h"
+#import "WGAlertView.h"
+
+
+// 字体相关(颜色和字体大小)
+#define GREENCOLOR  [UIColor colorWithRed:0.443 green:0.765 blue:0.255 alpha:1]
+#define REDCOLOR    [UIColor colorWithRed:0.906 green:0.296 blue:0.235 alpha:1]
+#define BLUECOLOR  [UIColor colorWithRed:0.203 green:0.596 blue:0.858 alpha:1]
+
+/************屏幕宽高**************/
+#define WGScreenWidth  ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
+
+#define WGScreenHeight  ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
+
+
+/**声明这个宏定义,主要是用于Masonry中的block中(防止循环引用)*/
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+/************调试相关**************/
+#ifdef __OBJC__
+
+#ifdef DEBUG
+
+#define WGLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define WGLog(...)
+#endif
+#endif
+
+#endif /* PrefixHeader_pch */
