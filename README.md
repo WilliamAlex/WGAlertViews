@@ -1,7 +1,4 @@
 # WGAlertViews
-自定义弹框展示:
-![image](/Users/alexwilliam/Desktop/WGAlertView.gif)   
-
 调用方式:
 ```objc
     NSString* title=@"登陆成功",*msg=@"登陆成功了啦", *fixed=@"确定啦" , *cancel=@"取消吧";;
