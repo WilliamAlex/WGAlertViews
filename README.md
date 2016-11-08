@@ -1,6 +1,6 @@
 # WGAlertViews
 自定义弹框展示:
-![image](https://github.com/YourAcountName/ProjectName/blob/master/GIFName.gif )   
+![image](/Users/alexwilliam/Desktop/WGAlertView.gif)   
 
 调用方式:
 ```objc
